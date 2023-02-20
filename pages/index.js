@@ -1,7 +1,9 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Inter } from '@next/font/google';
 import styles from '@/styles/Home.module.css';
+import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -29,7 +31,7 @@ export default function Home() {
             >
               <Image
                 src='/KreativeHomePageBanner.png'
-                alt='Vercel Logo'
+                alt='KDG Logo'
                 className={styles.vercelLogo}
                 width={150}
                 height={65}
@@ -48,22 +50,20 @@ export default function Home() {
         </div>
 
         <div className={styles.grid}>
-          <a
-            href='https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-            className={styles.card}
-            target='_blank'
-            rel='noopener noreferrer'
-          >
+          <Link href='/Gallery' className={styles.card}>
             <h2
-              className={`${inter.className} bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500`}
+              className={`${inter.className} bg-clip-text text-transparent bg-gradient-to-r from-green-300 to-white`}
             >
-              Gallary <span>-&gt;</span>
+              Gallery{' '}
+              <span>
+                <ArrowRightAltIcon sx={{ color: 'paleturquoise', fontSize: 40 }} />
+              </span>
             </h2>
             <p className={inter.className}>
               Explore our Kreative designs for yourself and&nbsp;book us on
               today.
             </p>
-          </a>
+          </Link>
 
           <a
             href='https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
@@ -72,9 +72,13 @@ export default function Home() {
             rel='noopener noreferrer'
           >
             <h2
-              className={`${inter.className} bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500`}
+              className={`${inter.className} bg-clip-text text-transparent bg-gradient-to-r from-pink-400 to-violet-200`}
             >
-              Purchase <span>-&gt;</span>
+              Purchase{' '}
+              <span>
+                {' '}
+                <ArrowRightAltIcon sx={{ color: 'peachpuff', fontSize: 40 }} />
+              </span>
             </h2>
             <p className={inter.className}>
               Purschase products and keepsakes for your next&nbsp;event!
@@ -88,9 +92,13 @@ export default function Home() {
             rel='noopener noreferrer'
           >
             <h2
-              className={`${inter.className} bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500`}
+              className={`${inter.className} bg-clip-text text-transparent bg-gradient-to-r from-blue-300 to-violet-500`}
             >
-              About Us <span>-&gt;</span>
+              About Us{' '}
+              <span>
+                {' '}
+                <ArrowRightAltIcon sx={{ color: 'palegreen', fontSize: 40 }} />
+              </span>
             </h2>
             <p className={inter.className}>
               Come and get to know Kreative Designs &&nbsp;gifts.
@@ -104,9 +112,13 @@ export default function Home() {
             rel='noopener noreferrer'
           >
             <h2
-              className={`${inter.className} bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500`}
+              className={`${inter.className} bg-clip-text text-transparent bg-gradient-to-r from-pink-300 to-white`}
             >
-              Contact Us <span>-&gt;</span>
+              Contact Us{' '}
+              <span>
+                {' '}
+                <ArrowRightAltIcon sx={{ color: 'plum', fontSize: 40 }} />
+              </span>
             </h2>
             <p className={inter.className}>
               Book us for your next event and make it &nbsp;memorable.
