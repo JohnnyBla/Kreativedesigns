@@ -5,8 +5,9 @@ const Gallery = () => {
   return (
     <>
       <main
-        className={`${styles.main} bg-gradient-to-r from-violet-500 to-black-400`}
+        className={`${styles.main} bg-gradient-to-r from-violet-500 to-black`}
       >
+        <h1>Gallery</h1>
         <div className={styles.center}>
           <ImageFiles />
         </div>

@@ -13,33 +13,41 @@ const ImageFiles = () => {
   };
 
   return (
-    <Box sx={{ width: '100%', typography: 'body1' }}>
+    <Box className='px-5'>
       <TabContext value={value}>
         <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
           <TabList onChange={handleChange} aria-label='tabJoins' centered>
             <Tab
+              className='bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500'
               label='KeepSakes'
               icon={<Star />}
               iconPosition='end'
-              value='1'
+              value={1}
             />
             <Tab
+              className='bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500'
               label='Tables'
               icon={<Favorite />}
               iconPosition='end'
-              value='2'
+              value={2}
             />
             <Tab
+              className='bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500'
               label='miscellaneous'
               icon={<MiscellaneousServices />}
               iconPosition='end'
-              value='3'
+              value={3}
             />
           </TabList>
         </Box>
-        <TabPanel value='1'>
-          <div>
+        <TabPanel value={1}>
+          <Box
+            sx={{
+              width: 'fit-content',
+            }}
+          >
             <ImageList
+              variant='quilted'
               sx={{ width: 'fit-content', height: 'auto', overflow: 'visible' }}
               cols={4}
               gap={17}
@@ -61,11 +69,12 @@ const ImageFiles = () => {
                 }
               })}
             </ImageList>
-          </div>
+          </Box>
         </TabPanel>
-        <TabPanel value='2'>
+        <TabPanel value={2}>
           <div>
             <ImageList
+              variant='masonry'
               sx={{ width: 'fit-content', height: 'auto', overflow: 'visible' }}
               cols={4}
               gap={17}
@@ -76,7 +85,7 @@ const ImageFiles = () => {
                   return (
                     <ImageListItem key={pictures.id}>
                       <Image
-                        className={styles.imageGallery}
+                        className={`${styles.imageGallery}`}
                         width={250}
                         src={pictures.src}
                         alt={pictures.id}

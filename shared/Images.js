@@ -74,4 +74,9 @@ export const Images = [
     src: require('images/15.jpg'),
     display: 'table',
   },
+  {
+    id: 16,
+    src: require('images/16.jpg'),
+    display: 'table',
+  },
 ];
