@@ -17,15 +17,16 @@ export default function Home() {
       <main
         className={`${styles.main} bg-gradient-to-r from-violet-500 to-black`}
       >
-        <div className={styles.description}>
-          <p>Lets Get Kreative</p>
+        <div className={`${styles.description}`}>
+          <p className='md:bg-clip-text md:text-transparent md:bg-gradient-to-r from-pink-500 to-violet-500'>
+            Lets Get Kreative
+          </p>
           <div>
             <a
               href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
               target='_blank'
               rel='noopener noreferrer'
             >
-              
               <Image
                 src='/KreativeHomePageBanner.png'
                 alt='Vercel Logo'
@@ -59,7 +60,8 @@ export default function Home() {
               Gallary <span>-&gt;</span>
             </h2>
             <p className={inter.className}>
-              Explore our Kreative designs for yourself and&nbsp;book us on today.
+              Explore our Kreative designs for yourself and&nbsp;book us on
+              today.
             </p>
           </a>
 
@@ -107,8 +109,7 @@ export default function Home() {
               Contact Us <span>-&gt;</span>
             </h2>
             <p className={inter.className}>
-              Book us for your next event and make it 
-              &nbsp;memorable.
+              Book us for your next event and make it &nbsp;memorable.
             </p>
           </a>
         </div>
